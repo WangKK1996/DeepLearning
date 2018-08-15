@@ -19,9 +19,14 @@ e.g.
 
 ## 2、numpy.reshape
 参数设置：np.reshape(a, newshape, order='C').
+
 其中有一个newshape参数，可以选为-1，代表根据前面给出的数据，然后“推断出（infer）”剩下的维度。
+
 刚刚在把一个（209,96,96,3）的数组转船成（209,96*96*3）的array时就用到了这个函数：
 > a.reshape(a.shape[0], -1)
+
+## 3、np.dot()
+和直观感受不一样，np.dot实际上对于矩阵做的是矩阵乘法（而不是点乘）
 
 
 

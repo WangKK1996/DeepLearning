@@ -28,6 +28,20 @@ e.g.
 ## 3、np.dot()
 和直观感受不一样，np.dot实际上对于矩阵做的是矩阵乘法（而不是点乘）
 
+# 一些小tips
+1、计算正确率：
+Plot the decision boundary for logistic regression
 
+> plot_decision_boundary(lambda x: clf.predict(x), X, Y)
+
+> plt.title("Logistic Regression")
+
+Print accuracy
+
+> LR_predictions = clf.predict(X.T)
+
+> print ('Accuracy of logistic regression: %d ' % float((np.dot(Y,LR_predictions) + np.dot(1-Y,1-LR_predictions))/float(Y.size)*100) +'% ' + "(percentage of correctly labelled datapoints)")
+
+重点在于这个**np.dot(Y,LR_predictions) + np.dot(1-Y,1-LR_predictions)**,学习了学习了。
 
  
